@@ -1,0 +1,162 @@
+:root {
+
+  /* Primary */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--Off-white);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+  padding: 4rem;
+  width: 42rem;
+  gap: 2rem;
+  border-radius: 1rem 1rem 8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.input-bar {
+  width: 9rem;
+  padding: 0.8rem 1.6rem;
+  font-weight: 700;
+  font-size: 2rem;
+  outline: none;
+  border-style: solid;
+  border-radius: 0.4rem;
+  border-width: 0.04rem;
+  border-color: var(--Light-grey);
+}
+
+.input-errorMessage {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.6rem;
+  color: var(--Light-red)
+}
+
+.error-text {color: var(--Light-red);}
+.error-input{border-color: var(--Light-red);}
+
+.btn-container {
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  height: 1px;
+  background-color: var(--Light-grey);
+  position: relative;
+}
+
+.calculate-btn {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: var(--Purple);
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calculate-btn:hover {
+  background-color: var(--Off-black);
+}
+
+.btn-logo {
+  width: 2rem;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+.output-area {
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+span {
+  letter-spacing: 0.6rem;
+  color: var(--Purple);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 700px) {
+  section {
+    width: 375px;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .input {
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-bar {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0.6rem;
+  }
+
+  .calculate-btn {
+    left: 50%;
+  }
+
+  .output-area {
+    font-size: 3rem;
+  }
+}
